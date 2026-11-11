@@ -1,0 +1,15 @@
+{
+  "name": "deckrun-skills",
+  "description": "Deckrun skills for AI coding agents: deploy and operate apps through the deck CLI.",
+  "owner": {
+    "name": "Deckrun",
+    "url": "https://deckrun.com"
+  },
+  "plugins": [
+    {
+      "name": "deckrun",
+      "source": "./",
+      "description": "Deploy and operate apps with Deckrun from your coding agent, through the deck CLI."
+    }
+  ]
+}
