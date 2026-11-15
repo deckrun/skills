@@ -1,6 +1,6 @@
 {
   "name": "deckrun",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Deploy and operate apps with Deckrun from your coding agent, through the deck CLI.",
   "author": {
     "name": "Deckrun",

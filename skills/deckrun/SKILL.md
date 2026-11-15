@@ -26,6 +26,6 @@ If a command fails with `unauthorized`, run `deck auth login --output json` in t
 
 - Never run a destructive command (`deck apps delete`, `deck clusters delete`, `deck domains delete`, `deck providers delete`, `deck secrets unset`, `deck auth logout`), and never pass `--yes` to one. If the user wants one, give them the exact command from `deck agent-guide` to run in their own terminal.
 - Before `deck clusters create`, tell the user the provider, region, node size and node count, say that it creates billable resources in their cloud account, and wait for an explicit yes.
-- Before every `deck exec`, show the user the exact command and wait for their yes. Never open an interactive shell, and never print secret values (`env`, `printenv`). `deck forward` needs no confirmation.
+- Before every `deck exec`, show the user the exact command and wait for their yes. Never open an interactive shell, and never show secret values, such as the app's secrets or its environment. `deck forward` needs no confirmation.
 - Never ask the user to paste a cloud provider token or a Deckrun token into the chat. The user runs `deck providers add` in their own terminal.
 - If a step fails, stop and explain the error to the user instead of improvising.
