@@ -12,7 +12,7 @@ Deckrun deploys apps to managed Kubernetes clusters that it creates in the user'
 Run `deck version`.
 
 - Not installed: install it with `brew install deckrun/deck-cli/deck` if Homebrew is available, otherwise `curl -L https://deckrun.com/install-cli.sh | sh`.
-- Older than 2.1 (`deck agent-guide` is an unknown command): upgrade with `brew upgrade deck`, or run the install script again.
+- Older than 2.1.2: upgrade with `brew upgrade deck`, or run the install script again. Older versions lack the guide's sign-up and sign-in steps (before 2.1, `deck agent-guide` is an unknown command).
 
 ## 2. Read the guide
 
