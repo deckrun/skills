@@ -64,7 +64,7 @@ The agent will need you to:
 The skill is instructions only: it has no scripts, hooks or MCP servers, and it collects and sends nothing itself. It tells the agent to:
 
 - run `deck` commands in your shell;
-- install deck if it is missing, with Homebrew (`brew install deckrun/deck-cli/deck`) or the install script at `https://deckrun.com/install-cli.sh`;
+- install deck with Homebrew (`brew install deckrun/deck-cli/deck`) if it is missing. Without Homebrew, it asks you to install deck yourself;
 - run `deck agent-guide`, which prints the usage guide built into your installed deck (it is not fetched from the network);
 - sign you in with `deck auth login`, which opens `app.deckrun.com` in your browser, where you approve access. deck stores the token on your machine.
 
