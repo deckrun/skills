@@ -8,9 +8,32 @@ The skill is deliberately thin: it tells the agent to run `deck agent-guide`, wh
 
 ### Claude Code
 
+Run these in Claude Code one at a time, each as its own message:
+
 ```
 /plugin marketplace add deckrun/skills
+```
+
+```
 /plugin install deckrun@deckrun-skills
+```
+
+The skill loads in your next session.
+
+### Codex
+
+Run this in Codex, which picks the skill up in the same session:
+
+```
+$skill-installer install https://github.com/deckrun/skills/tree/main/skills/deckrun
+```
+
+### Cursor
+
+Run this in your terminal (it needs Node). Cursor loads the skill in your next chat.
+
+```bash
+npx skills add deckrun/skills -a cursor -g
 ```
 
 ### Any agent that supports Agent Skills
@@ -20,6 +43,8 @@ npx skills add deckrun/skills
 ```
 
 Or copy `skills/deckrun/` into your agent's skills directory, for example `~/.claude/skills/deckrun/` for Claude Code or `~/.agents/skills/deckrun/` for Codex.
+
+The setup pages at [deckrun.com/agents](https://deckrun.com/agents) have the same commands, and a prompt your agent can follow to install deck and the skill for you.
 
 ## Use
 
