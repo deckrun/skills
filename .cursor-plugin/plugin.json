@@ -1,0 +1,17 @@
+{
+  "name": "deckrun",
+  "displayName": "Deckrun",
+  "version": "0.2.0",
+  "description": "Deploy and operate apps with Deckrun from your coding agent, through the deck CLI.",
+  "author": {
+    "name": "Deckrun"
+  },
+  "homepage": "https://deckrun.com/docs/getting-started/ai-agents",
+  "repository": "https://github.com/deckrun/skills",
+  "license": "MIT",
+  "keywords": ["deckrun", "deploy", "kubernetes", "digitalocean", "scaleway"],
+  "logo": "assets/icon.png",
+  "category": "developer-tools",
+  "tags": ["kubernetes", "deploy", "devops"],
+  "skills": "./skills/"
+}

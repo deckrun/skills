@@ -1,6 +1,6 @@
 {
   "name": "deckrun",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Deploy and operate apps with Deckrun from your coding agent, through the deck CLI.",
   "author": {
     "name": "Deckrun",
@@ -9,5 +9,41 @@
   "homepage": "https://deckrun.com/docs/getting-started/ai-agents",
   "repository": "https://github.com/deckrun/skills",
   "license": "MIT",
-  "keywords": ["deckrun", "deploy", "kubernetes", "digitalocean", "scaleway"]
+  "keywords": [
+    "deckrun",
+    "deploy",
+    "kubernetes",
+    "digitalocean",
+    "scaleway"
+  ],
+  "skills": "./skills/",
+  "requires_local_executor": true,
+  "interface": {
+    "displayName": "Deckrun",
+    "shortDescription": "Deploy apps to your own cloud",
+    "longDescription": "Deploy and operate apps with Deckrun through the deck CLI. Deckrun creates a managed Kubernetes cluster in your own DigitalOcean or Scaleway account and deploys your apps to it.\n\nThe skill tells the agent to install deck if it is missing (with Homebrew or the install script at https://deckrun.com/install-cli.sh), run deck agent-guide, which prints the guide built into the installed CLI, and sign you in with deck auth login, which you approve in your own browser. Before it creates a cluster, the agent states the provider, region, node size and node count, says it creates billable resources in your cloud account, and waits for your explicit yes. It never asks you to paste a token into the chat: you connect your cloud by running deck providers add in your own terminal. It never runs destructive commands such as deleting an app or a cluster; it gives you the exact command to run yourself.\n\nThe skill is instructions only, with no scripts, hooks or servers. deck talks to the Deckrun API (api.deckrun.com) and to your cluster. It needs a shell, so the plugin runs where commands can execute locally.",
+    "developerName": "Deckrun",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Install the deck CLI",
+      "Sign in to Deckrun through the browser",
+      "Create a Kubernetes cluster after your explicit yes",
+      "Deploy apps and report their URL",
+      "Diagnose failed deploys from status and logs",
+      "Set secrets and custom domains"
+    ],
+    "websiteURL": "https://deckrun.com",
+    "supportURL": "https://github.com/deckrun/skills/issues",
+    "privacyPolicyURL": "https://deckrun.com/privacy",
+    "termsOfServiceURL": "https://deckrun.com/terms",
+    "defaultPrompt": [
+      "Deploy this repo to my DigitalOcean with Deckrun",
+      "My last deploy of web failed. Can you figure out why and fix it?",
+      "How much CPU and memory is my app using on Deckrun?"
+    ],
+    "brandColor": "#7515F9",
+    "brandColorDark": "#9B6FFC",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png"
+  }
 }
